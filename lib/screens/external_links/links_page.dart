@@ -1,10 +1,8 @@
+import 'package:abhisargah_health_app/screens/external_links/redirect_tile.dart';
 import 'package:flutter/material.dart';
-import 'package:hack/screens/Profile/profile.dart/profile.dart';
-import 'package:hack/screens/chatbot/chatbot.dart';
-import 'package:hack/screens/meditation/meditation.dart';
-import 'package:hack/screens/welcome/helper/redirect_tile.dart';
-import 'helper/chattile.dart';
-import 'helper/theme.dart';
+import '../meditation/mediatation.dart';
+import 'chattile.dart';
+import 'theme.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);

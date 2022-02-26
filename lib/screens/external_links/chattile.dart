@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hack/screens/welcome/welcome.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'links_page.dart';
 import 'theme.dart';
 
 class ChatTile extends StatelessWidget {
@@ -47,7 +46,8 @@ class ChatTile extends StatelessWidget {
             Text(text,
                 style: isRead
                     ? subtitleTextStyle
-                    : subtitleTextStyle.copyWith(color: primaryColor, fontWeight: FontWeight.w500)),
+                    : subtitleTextStyle.copyWith(
+                        color: primaryColor, fontWeight: FontWeight.w500)),
           ]),
           const Spacer(),
           Text(
