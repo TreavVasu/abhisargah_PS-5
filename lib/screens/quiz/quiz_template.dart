@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:rive/rive.dart';
+
+import '../../logic/quiz/quiz_brain.dart';
 
 class TemplateForQuiz {
   Widget getQuizPage(

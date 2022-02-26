@@ -1,5 +1,8 @@
+import 'package:abhisargah_health_app/screens/meditation/mediatation.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+
+import '../../yoga/yoga.dart';
 
 class Dashboard extends StatelessWidget {
   @override
@@ -13,11 +16,11 @@ class Dashboard extends StatelessWidget {
               onTap: () {
                 //! TODO    Meditation Link
 
-                // Navigator.push(
-                //   context,
-                //   MaterialPageRoute(builder: (context) => const
-                //    MeditationPage()),
-                // );
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const MeditationPage()),
+                );
               },
               child: Container(
                 margin: EdgeInsets.all(5.0),
@@ -56,7 +59,10 @@ class Dashboard extends StatelessWidget {
               ),
             ),
             GestureDetector(
-              onTap: () => print('Hello, let us do  Yoga'),
+              onTap: () => Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => YogaScreen()),
+              ),
               child: Container(
                 margin: EdgeInsets.all(5.0),
                 decoration: BoxDecoration(

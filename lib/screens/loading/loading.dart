@@ -1,9 +1,9 @@
+import 'package:abhisargah_health_app/screens/home/home.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:hack/logic/quizbrain/quiz.dart';
-import 'package:hack/screens/results/result_screen.dart';
 import 'package:rive/rive.dart';
 
+import '../../logic/quiz/quiz_brain.dart';
 import '../quiz/quiz_template.dart';
 
 class LoadingQusScreen {
@@ -50,9 +50,10 @@ class LoadingQusScreen {
     if (index == 24) {
       print(quizBrain.answers);
       //! integrate the last page here
-      return ResultScreen(
-        quizBrain: quizBrain,
-      );
+      return MyHomePage();
+      //   ResultScreen(
+      //   quizBrain: quizBrain,
+      // );
     } else {
       String qus = quizBrain.qusList[index];
       String animationUrl = quizBrain.animationUrl[index];

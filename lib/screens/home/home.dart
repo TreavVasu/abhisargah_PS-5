@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../loading/loading.dart';
 import 'card/reusablecard.dart';
 import 'dashboard/dashboard.dart';
 
@@ -85,8 +86,10 @@ class _MyHomePageState extends State<MyHomePage> {
                         activeTrackColor: Colors.white,
                         thumbColor: Color(0xFF212F45),
                         overlayColor: Color(0x29caf0f8),
-                        thumbShape: RoundSliderThumbShape(enabledThumbRadius: 15.0),
-                        overlayShape: RoundSliderOverlayShape(overlayRadius: 50.0),
+                        thumbShape:
+                            RoundSliderThumbShape(enabledThumbRadius: 15.0),
+                        overlayShape:
+                            RoundSliderOverlayShape(overlayRadius: 50.0),
                       ),
                       child: Slider(
                         value: height.toDouble(),
@@ -133,12 +136,12 @@ class _MyHomePageState extends State<MyHomePage> {
               flex: 1,
               child: GestureDetector(
                 onTap: () {
-                  //! TODO LoadingScreen Link
-                  // Navigator.push(
-                  //   context,
-                  //   MaterialPageRoute(builder: (context) =>
-                  //   LoadingQusScreen().getScreen(context)),
-                  // );
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) =>
+                            LoadingQusScreen().getScreen(context)),
+                  );
                 },
                 child: Container(
                   child: Column(

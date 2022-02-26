@@ -1,66 +1,18 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:hack/logic/quizbrain/quiz.dart';
-import 'package:hack/screens/results/result_screen.dart';
 import 'package:rive/rive.dart';
 
-import '../quiz/quiz_template.dart';
+class MeditationPage extends StatelessWidget {
+  const MeditationPage({Key? key}) : super(key: key);
 
-class LoadingQusScreen {
-  late QuizBrain quizBrain = QuizBrain();
-  int index = 0;
-
-  Widget getScreen(BuildContext context) {
-    return Scaffold(
-      backgroundColor: const Color(0xff0B525B),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            const SizedBox(
-              height: 400,
-              width: 400,
-              child: RiveAnimation.asset("assets/animations/loading.riv"),
-            ),
-            const Text(
-              "Your next question is loading",
-              style: TextStyle(
-                fontSize: 30,
-                color: Colors.white,
-              ),
-            ),
-            // ignore: deprecated_member_use
-            ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => ButtonWork(context)),
-                  );
-                },
-                child: const Text("Press MMMMEEEEE")),
-          ],
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: RiveAnimation.asset("assets/animations/pranayama.riv"),
         ),
       ),
     );
-  }
-
-  Widget ButtonWork(BuildContext context) {
-    if (index == 24) {
-      print(quizBrain.answers);
-      //! integrate the last page here
-      return ResultScreen(
-        quizBrain: quizBrain,
-      );
-    } else {
-      String qus = quizBrain.qusList[index];
-      String animationUrl = quizBrain.animationUrl[index];
-      String qNoUrl = quizBrain.noUrl[index];
-      String qYesUrl = quizBrain.yesUrl[index];
-      index++;
-      return TemplateForQuiz().getQuizPage(
-          animationUrl, qus, qYesUrl, qNoUrl, index, context, quizBrain);
-    }
   }
 }
