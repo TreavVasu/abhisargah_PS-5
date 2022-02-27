@@ -19,6 +19,7 @@ class TemplateForQuiz {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
             Flexible(
+
               flex: 1,
               child: SizedBox(
                 width: 250,
@@ -41,15 +42,20 @@ class TemplateForQuiz {
                 ),
                 child: Column(
                   children: [
-                    Text(
-                      "\n" + stringForQus,
-                      style: const TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
+                    Flexible(
+                      flex:2,
+                      child: Text(
+                        "\n" + stringForQus,
+                        style: const TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                        ),
                       ),
                     ),
-                    SizedBox(
-                      height: 200,
+                    Flexible(
+                      flex :3,
+                      child:SizedBox(
+
                       width: 300,
                       child: ElevatedButton(
                         onPressed: () {
@@ -59,48 +65,41 @@ class TemplateForQuiz {
                         child: Image.asset(locForNo),
                         style: ButtonStyle(
                           backgroundColor:
-                              MaterialStateProperty.all(Colors.grey),
+                          MaterialStateProperty.all(Colors.grey),
                           shape:
-                              MaterialStateProperty.all<RoundedRectangleBorder>(
+                          MaterialStateProperty.all<RoundedRectangleBorder>(
                             RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(18.0),
                                 side: const BorderSide(color: Colors.black38)),
                           ),
                         ),
                       ),
-                    ),
-                    const Padding(padding: EdgeInsets.fromLTRB(0, 10, 0, 0)),
-                    SizedBox(
-                      height: 200,
-                      width: 300,
-                      child: ElevatedButton(
-                        onPressed: () {
-                          quizBrain.answers.add(1);
-                          Navigator.pop(context);
-                        },
-                        child: Image.asset(locForYes),
-                        style: ButtonStyle(
-                          backgroundColor:
-                              MaterialStateProperty.all(Colors.grey),
-                          shape:
-                              MaterialStateProperty.all<RoundedRectangleBorder>(
-                            RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(18.0),
-                                side: const BorderSide(color: Colors.black38)),
-                          ),
-                        ),
-                      ),
-                    ),
-                    const Padding(padding: EdgeInsets.fromLTRB(0, 20, 0, 0)),
-                    Text(
-                      qusNum.toString(),
-                      style: const TextStyle(color: Colors.white, fontSize: 20),
-                    ),
-                    const Padding(padding: EdgeInsets.fromLTRB(0, 20, 0, 0)),
-                    const Text(
-                      "Choose any one option to go to next qus",
-                      style: TextStyle(color: Colors.grey),
-                    ),
+                    ),),
+
+                   Flexible(flex: 3,
+                     child: SizedBox(
+
+                     width: 300,
+                     child: ElevatedButton(
+                       onPressed: () {
+                         quizBrain.answers.add(1);
+                         Navigator.pop(context);
+                       },
+                       child: Image.asset(locForYes),
+                       style: ButtonStyle(
+                         backgroundColor:
+                         MaterialStateProperty.all(Colors.grey),
+                         shape:
+                         MaterialStateProperty.all<RoundedRectangleBorder>(
+                           RoundedRectangleBorder(
+                               borderRadius: BorderRadius.circular(18.0),
+                               side: const BorderSide(color: Colors.black38)),
+                         ),
+                       ),
+                     ),
+                   ),),
+
+
                   ],
                 ),
               ),

@@ -28,7 +28,7 @@ class LoadingQusScreen {
               child: RiveAnimation.asset("assets/animations/loading.riv"),
             ),
             const Text(
-              "Your next question is loading",
+              "Your next question is loaded",
               style: TextStyle(
                 fontSize: 30,
                 color: Colors.white,
@@ -43,7 +43,7 @@ class LoadingQusScreen {
                         builder: (context) => ButtonWork(context)),
                   );
                 },
-                child: const Text("Press MMMMEEEEE")),
+                child: const Text("Press Here")),
           ],
         ),
       ),
@@ -80,30 +80,46 @@ class _LoadState extends State<Load> {
   MlProcess?  mlp;
 
   @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
+  void didChangeDependencies() {
+    // TODO: implement didChangeDependencies
+    super.didChangeDependencies();
     mlp=MlProcess();
 
   }
+
+
   String ?result;
   bool loading =true;
+  bool resultLoading =false;
   @override
   Widget build(BuildContext context) {
-    var y = widget.quizBrain.answers;
 
+    return loading ? Container(
+      color: Colors.white,
+      child:SizedBox(
+        height: 100,
+        width: 100,
 
-    final x = mlp?.classify([y]);
-     result=Result().getResult(x!);
-    Database().
-    setUserTestResult(widget.quizBrain.answers, result!).then((value) {
+        child:resultLoading==true? Center(
+          child: CircularProgressIndicator(),
+        ) : Center(child:ElevatedButton(onPressed: (){
+          setState(() {
+            resultLoading=true;
+          });
+          var y = widget.quizBrain.answers;
+          final x = mlp?.classify([y]);
+          result=Result().getResult(x!);
+          Database().
+          setUserTestResult(widget.quizBrain.answers, result!).then((value) {
 
-      setState(() {
-        loading =false;
-      });
-    });
-    return loading ? CircularProgressIndicator(
-
-    ): ResultScreen(result: result,);
+            setState(() {
+              loading =false;
+            });
+          });
+        },
+            child:Text("Submit")
+        ,)),
+      ),
+    ) : ResultScreen(result: result,);
   }
 }

@@ -6,6 +6,7 @@ import 'package:google_fonts/google_fonts.dart';
 void main() => runApp(MaterialApp(home: ProfileScreen()));
 
 class ProfileScreen extends StatefulWidget {
+  String route ="./home/profile_screen";
   @override
   ProfileScreenState createState() => new ProfileScreenState();
 }

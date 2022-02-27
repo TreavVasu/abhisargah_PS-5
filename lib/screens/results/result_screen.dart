@@ -47,7 +47,9 @@ class _ResultScreenState extends State<ResultScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Theme.of(context).primaryColor,
-      floatingActionButton: FloatingActionButton(onPressed: null, child:Icon(Icons.home)),
+      floatingActionButton: FloatingActionButton(onPressed: (){
+        Navigator.of(context).pushReplacementNamed(MyHomePage().route);
+      }, child:Icon(Icons.home)),
       body: Center(
         child: Column(
           children: [
