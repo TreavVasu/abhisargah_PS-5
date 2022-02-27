@@ -4,6 +4,7 @@ import 'card/reusablecard.dart';
 import 'dashboard/dashboard.dart';
 
 class MyHomePage extends StatefulWidget {
+  String route='/home/home.dart';
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }

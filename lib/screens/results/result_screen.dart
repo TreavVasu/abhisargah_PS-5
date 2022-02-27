@@ -7,18 +7,16 @@ import '../home/home.dart';
 import '../../services/database.dart';
 
 class ResultScreen extends StatefulWidget {
-  final QuizBrain? quizBrain;
+  String ?result;
+  ResultScreen({this.result});
 
-  ResultScreen({Key? key, this.quizBrain}) : super(key: key);
 
   @override
   State<ResultScreen> createState() => _ResultScreenState();
 }
 
 class _ResultScreenState extends State<ResultScreen> {
-  late MlProcess mlp;
-  String ?result;
-  bool loading =true;
+
   Map<String,String>details={
     'Anxiety':"It’s normal to feel anxious "
         "about moving to a new place, starting a new job, or taking a test. This type of anxiety is unpleasant, "
@@ -41,26 +39,13 @@ class _ResultScreenState extends State<ResultScreen> {
   @override
   void initState() {
     super.initState();
-    mlp = MlProcess();
+
   }
   int length=0;
   List<dynamic>?myList;
   @override
   Widget build(BuildContext context) {
-    return loading==true ? Container(
-      color: Colors.white,
-          child: ElevatedButton(onPressed:(){
-            var y = widget.quizBrain?.answers;
-            final x = mlp.classify([y!]);
-            result=Result().getResult(x);
-            Database().
-            setUserTestResult(widget.quizBrain?.answers, result!).then((value) {
-              setState(() {
-              loading=false;
-            });
-            });
-          },child:Text("Long Press to post Result..")),
-    ) :Scaffold(
+    return Scaffold(
       backgroundColor: Theme.of(context).primaryColor,
       floatingActionButton: FloatingActionButton(onPressed: null, child:Icon(Icons.home)),
       body: Center(
@@ -71,23 +56,29 @@ class _ResultScreenState extends State<ResultScreen> {
               children:[
                 Padding(
                   padding: const EdgeInsets.fromLTRB(0,80,0,60),
-                  child: Text( "YOUR CURRENT RESULT IS ...\n" +"\t" +result!,
+                  child: Text( "YOUR CURRENT RESULT IS ...\n" +"\t" +widget.result!,
                     style: TextStyle( fontSize: 25,color: Colors.white,),textAlign: TextAlign.center),
                 ),
-                if(myList==null && result!=null)Text(details[result]!),
-                if(myList!=null)Material(
-                  elevation: 20,
-                  child: Container(
-                    height:MediaQuery.of(context).size.height/1.75,
-                    decoration: BoxDecoration(
-                      color: Color(0xff1B3A4B),
-                        ),
-                    child:ListView.builder(itemBuilder:(BuildContext ctx,int index){
-                      return ListTile(
-                        title: Center(child: Text(myList![index]['group'],style: TextStyle(color: Colors.white),)),
-                          );
-                    }, itemCount: myList!.length,)
-                    ,),
+                if(myList==null )Text(details[widget.result]!),
+                if(myList!=null)Column(
+                  
+                  children:[
+                    Padding(padding: EdgeInsets.all(5), child: Text("Your Past Results are .."),),
+                    Material(
+                    elevation: 20,
+                    child: Container(
+                      height:MediaQuery.of(context).size.height/1.75,
+                      decoration: BoxDecoration(
+                        color: Color(0xff1B3A4B),
+                      ),
+                      child:ListView.builder(itemBuilder:(BuildContext ctx,int index){
+                        
+                        return ListTile(
+                          title: Center(child: Text(index.toString() +" "  +   myList![index]['group'],style: TextStyle(color: Colors.white),)),
+                        );
+                      }, itemCount: myList!.length,)
+                      ,),
+                  ),] 
                 ),
                 if(myList==null)ElevatedButton(onPressed:() async{
 

@@ -2,8 +2,11 @@ import 'package:abhisargah_health_app/screens/home/home.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:rive/rive.dart';
+import 'package:tflite_flutter/tflite_flutter.dart';
 
+import '../../logic/mlprocess/mlprocess.dart';
 import '../../logic/quiz/quiz_brain.dart';
+import '../../services/database.dart';
 import '../quiz/quiz_template.dart';
 import '../results/result_screen.dart';
 
@@ -51,10 +54,9 @@ class LoadingQusScreen {
     if (index == 24) {
 
       //! integrate the last page here
+      return Load(quizBrain);
 
-       return  ResultScreen(
-        quizBrain: quizBrain,
-      );
+
     } else {
       String qus = quizBrain.qusList[index];
       String animationUrl = quizBrain.animationUrl[index];
@@ -64,5 +66,44 @@ class LoadingQusScreen {
       return TemplateForQuiz().getQuizPage(
           animationUrl, qus, qYesUrl, qNoUrl, index, context, quizBrain);
     }
+  }
+}
+class Load extends StatefulWidget {
+  QuizBrain quizBrain;
+  Load(this.quizBrain);
+
+  @override
+  State<Load> createState() => _LoadState();
+}
+
+class _LoadState extends State<Load> {
+  MlProcess?  mlp;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    mlp=MlProcess();
+
+  }
+  String ?result;
+  bool loading =true;
+  @override
+  Widget build(BuildContext context) {
+    var y = widget.quizBrain.answers;
+
+
+    final x = mlp?.classify([y]);
+     result=Result().getResult(x!);
+    Database().
+    setUserTestResult(widget.quizBrain.answers, result!).then((value) {
+
+      setState(() {
+        loading =false;
+      });
+    });
+    return loading ? CircularProgressIndicator(
+
+    ): ResultScreen(result: result,);
   }
 }

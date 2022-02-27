@@ -1,3 +1,5 @@
+import 'package:abhisargah_health_app/screens/home/home.dart';
+import 'package:abhisargah_health_app/screens/home/profile_screen.dart';
 import 'package:abhisargah_health_app/services/authentication.dart';
 import 'package:abhisargah_health_app/wrapper.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -28,6 +30,9 @@ class MyApp extends StatelessWidget {
         title: 'Flutter Demo',
         theme: ThemeData(primaryColor: Color(0xff90e0ef)),
         home: Wrapper(),
+        routes: {
+          MyHomePage().route:(_)=>MyHomePage()
+        },
       ),
     );
   }

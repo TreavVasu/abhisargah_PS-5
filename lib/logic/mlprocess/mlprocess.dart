@@ -28,9 +28,7 @@ class MlProcess {
 
     _interpreter.run(input, output);
 
-    print(output[0][0]);
 
-    print("Failed?-----------------^^^^^");
     return [
       output[0][0],
       output[0][1],
