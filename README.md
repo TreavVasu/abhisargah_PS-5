@@ -27,22 +27,22 @@ Test results based on 24 Key indicators
 Test results of user to be accessible by their parents and children
 
 # Tech stacks used:
-Flutter
-A.I./M.L.
-Cloud 
-A.R.
+Flutter <br />
+A.I./M.L.<br />
+Cloud <br />
+A.R. <br />
 
 # Team members
 Divy Arpit (3rd year, CSE, NIT Raipur)
-LinkedIn: https://www.linkedin.com/in/divy-arpit-40946b188
+LinkedIn: https://www.linkedin.com/in/divy-arpit-40946b188 <br />
 Shikhar Mishra (3rd year, CSE, NIT Raipur)
-LinkedIn: https://www.linkedin.com/in/shikhar-mishra-23038b191
+LinkedIn: https://www.linkedin.com/in/shikhar-mishra-23038b191 <br />
 Shruti Agrawal (3rd year, CSE, NIT Raipur)
-LinkedIn: https://www.linkedin.com/in/shruti-agrawal-247526190
+LinkedIn: https://www.linkedin.com/in/shruti-agrawal-247526190 <br />
 Vasu Soni (3rd year, CSE, NIT Raipur)
-LinkedIn: https://www.linkedin.com/in/iamvasusoni
+LinkedIn: https://www.linkedin.com/in/iamvasusoni <br />
 Yash Bansal (3rd year, CSE, NIT Raipur)
-LinkedIn: https://www.linkedin.com/in/yash-bansal-90474a19b
+LinkedIn: https://www.linkedin.com/in/yash-bansal-90474a19b <br />
 Ayush Chouksey (3rd year, Mech, NIT Raipur)
 LinkedIn: https://www.linkedin.com/in/ayush-chouksey-476043190
  
