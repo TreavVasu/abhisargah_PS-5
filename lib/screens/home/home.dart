@@ -1,16 +1,14 @@
 import 'package:abhisargah_health_app/screens/home/profile_screen.dart';
 import 'package:flutter/material.dart';
+import '../chatbot/chatbot.dart';
 import '../loading/loading.dart';
 import 'card/reusablecard.dart';
 import 'dashboard/dashboard.dart';
 
-enum PopupValues{
-  TestPage,
-  ChatBot,
-  ProfilePage
-}
+enum PopupValues { TestPage, ChatBot, ProfilePage }
+
 class MyHomePage extends StatefulWidget {
-  String route='/home/home.dart';
+  String route = '/home/home.dart';
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
@@ -40,62 +38,60 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-
-        backgroundColor: Colors.transparent, actions: [
-        PopupMenuButton(
-          onSelected: (value){
-            if(value==PopupValues.TestPage){
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) =>
-                        LoadingQusScreen().getScreen(context)),
-              );
-            }
-            else if(value==PopupValues.ChatBot){
-
-            }
-            else{
-              Navigator.of(context).pushNamed(ProfileScreen().route);
-            }
-          },
-          icon: Icon(Icons.more_vert),
-          itemBuilder: (_)=>[
-            const PopupMenuItem(
-
-              padding: EdgeInsets.all(5),
-              child: SizedBox(
-                height:60,
-                width: 140,
-                child: Card(
-                  elevation: 5,
-
-                    child:Center(child:Text("Test Page"))),
-              ),value: PopupValues.TestPage,),
-            const PopupMenuItem(
-              padding: EdgeInsets.all(5),
-              child: SizedBox(
-                height:60,width: 140,
-                child: Card(
-                  elevation: 5,
-                  margin: EdgeInsets.all(10),
-
-                    child:Center(child:Text("Chat Bot"))),
-              ),value: PopupValues.ChatBot,),
-            const PopupMenuItem(
-
-              padding: EdgeInsets.all(5),
-              child: SizedBox(
-                height: 60,width: 140,
-                child: Card(
-elevation: 5,
-                    child:Center(child:Text("Profile Screen"))),
-              ),value: PopupValues.ProfilePage,),
-            
-
-          ],
-        ),
-      ],),
+        backgroundColor: Colors.transparent,
+        actions: [
+          PopupMenuButton(
+            onSelected: (value) {
+              if (value == PopupValues.TestPage) {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => LoadingQusScreen().getScreen(context)),
+                );
+              } else if (value == PopupValues.ChatBot) {
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(builder: (context) => Chat()),
+                );
+              } else {
+                Navigator.of(context).pushNamed(ProfileScreen().route);
+              }
+            },
+            icon: Icon(Icons.more_vert),
+            itemBuilder: (_) => [
+              const PopupMenuItem(
+                padding: EdgeInsets.all(5),
+                child: SizedBox(
+                  height: 60,
+                  width: 140,
+                  child: Card(elevation: 5, child: Center(child: Text("Test Page"))),
+                ),
+                value: PopupValues.TestPage,
+              ),
+              const PopupMenuItem(
+                padding: EdgeInsets.all(5),
+                child: SizedBox(
+                  height: 60,
+                  width: 140,
+                  child: Card(
+                      elevation: 5,
+                      margin: EdgeInsets.all(10),
+                      child: Center(child: Text("Chat Bot"))),
+                ),
+                value: PopupValues.ChatBot,
+              ),
+              const PopupMenuItem(
+                padding: EdgeInsets.all(5),
+                child: SizedBox(
+                  height: 60,
+                  width: 140,
+                  child: Card(elevation: 5, child: Center(child: Text("Profile Screen"))),
+                ),
+                value: PopupValues.ProfilePage,
+              ),
+            ],
+          ),
+        ],
+      ),
       body: Container(
         decoration: const BoxDecoration(
             gradient: LinearGradient(
@@ -136,7 +132,7 @@ elevation: 5,
                       ),
                     ),
                     Flexible(
-                      child:Row(
+                      child: Row(
                         crossAxisAlignment: CrossAxisAlignment.baseline,
                         textBaseline: TextBaseline.alphabetic,
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -148,7 +144,6 @@ elevation: 5,
                         ],
                       ),
                     ),
-                    
                     Flexible(
                       child: SliderTheme(
                         data: SliderTheme.of(context).copyWith(
@@ -156,10 +151,8 @@ elevation: 5,
                           activeTrackColor: Colors.white,
                           thumbColor: Color(0xFF212F45),
                           overlayColor: Color(0x29caf0f8),
-                          thumbShape:
-                              RoundSliderThumbShape(enabledThumbRadius: 15.0),
-                          overlayShape:
-                              RoundSliderOverlayShape(overlayRadius: 50.0),
+                          thumbShape: RoundSliderThumbShape(enabledThumbRadius: 15.0),
+                          overlayShape: RoundSliderOverlayShape(overlayRadius: 50.0),
                         ),
                         child: Slider(
                           value: height.toDouble(),
@@ -187,7 +180,7 @@ elevation: 5,
                               Icon iconNeutral = Icon(
                                 Icons.sentiment_neutral_outlined,
                                 color: Colors.yellow,
-                                size:80,
+                                size: 80,
                               );
                               icon1 = height > 20
                                   ? height < 60
@@ -203,7 +196,6 @@ elevation: 5,
                 ),
               ),
             ),
-
           ],
         ),
       ),
