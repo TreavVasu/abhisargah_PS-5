@@ -1,3 +1,21 @@
+<<<<<<< HEAD
+# abhisargah_health_app
+
+A new Flutter project.
+
+## Getting Started
+
+This project is a starting point for a Flutter application.
+
+A few resources to get you started if this is your first Flutter project:
+
+- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+
+For help getting started with Flutter, view our
+[online documentation](https://flutter.dev/docs), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.
+=======
 # abhisargah_PS-5
 this repo contains the solution created by team abhisargh made during the hackaton organized by codeutsava
 
@@ -46,3 +64,4 @@ LinkedIn: https://www.linkedin.com/in/yash-bansal-90474a19b <br />
 Ayush Chouksey (3rd year, Mech, NIT Raipur)
 LinkedIn: https://www.linkedin.com/in/ayush-chouksey-476043190
  
+>>>>>>> 1be993c94ce73e89f683a5ee695321b8ca018c8a

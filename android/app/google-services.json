@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1054926266199",
+    "project_id": "mlapp-60185",
+    "storage_bucket": "mlapp-60185.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1054926266199:android:d91d35c0cf91f5993e2812",
+        "android_client_info": {
+          "package_name": "com.abhisargah.abhisargah_health_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1054926266199-i1netje7usg3ct2f79mv7d3ecvu2t8n2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCYDF5KYFL7qKp9exxlQCfS_3JCol7f5Dc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1054926266199-i1netje7usg3ct2f79mv7d3ecvu2t8n2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
