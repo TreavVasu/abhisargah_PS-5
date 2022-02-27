@@ -41,6 +41,8 @@ dependencies:
   rive: ^0.8.1
   tflite_flutter: ^0.9.0
   url_launcher: ^6.0.20
+  audioplayers: ^0.20.1
+
 
 
 dev_dependencies:
@@ -138,6 +140,10 @@ flutter:
     - assets/yoga/yoga_1.jpeg
     - assets/yoga/yoga_2.jpeg
     - assets/yoga/yoga_3.jpeg
+    - assets/nature.mp3
+    - assets/animations/nature.riv
+    - assets/om.mp3
+    - assets/yoga/yoga.jpeg
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg

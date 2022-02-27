@@ -14,8 +14,6 @@ class _YogaScreenState extends State<YogaScreen> {
     List<String> yogaContent = [];
     List<Icon> yogaImages = [];
 
-    String imageAssetFile = "assets/images/yoga.jpeg";
-
     return Scaffold(
       backgroundColor: Colors.white,
       body: Column(
@@ -25,7 +23,7 @@ class _YogaScreenState extends State<YogaScreen> {
             child: CircularBorderedCard(
                 height: 400,
                 width: double.infinity,
-                widget: Image.asset('assets/images/yoga.jpeg'),
+                widget: Image.asset('assets/yoga/yoga.jpeg'),
                 elevate: 4.0,
                 clr: Colors.amber),
           ),

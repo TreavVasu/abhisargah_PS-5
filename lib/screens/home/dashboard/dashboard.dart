@@ -1,7 +1,8 @@
 import 'package:abhisargah_health_app/screens/meditation/mediatation.dart';
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-
+import '../../nature/nature.dart';
 import '../../yoga/yoga.dart';
 
 class Dashboard extends StatelessWidget {
@@ -18,8 +19,7 @@ class Dashboard extends StatelessWidget {
 
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
-                      builder: (context) => const MeditationPage()),
+                  MaterialPageRoute(builder: (context) => const MeditationPage()),
                 );
               },
               child: Container(
@@ -59,10 +59,13 @@ class Dashboard extends StatelessWidget {
               ),
             ),
             GestureDetector(
-              onTap: () => Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => YogaScreen()),
-              ),
+              onTap: () {
+                playom();
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => YogaScreen()),
+                );
+              },
               child: Container(
                 margin: EdgeInsets.all(5.0),
                 decoration: BoxDecoration(
@@ -102,6 +105,10 @@ class Dashboard extends StatelessWidget {
             GestureDetector(
               onTap: () {
                 play();
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const NaturePage()),
+                );
               },
               child: Container(
                 margin: const EdgeInsets.all(5.0),
@@ -156,7 +163,12 @@ class Dashboard extends StatelessWidget {
 
   void play() {
     print("playing sonfgs ===================");
-    // AudioPlayer player = AudioPlayer();
-    // player.play('assets/music/song.mp3');
+    AudioCache player = AudioCache();
+    player.play('nature.mp3');
+  }
+
+  void playom() {
+    AudioCache player = AudioCache();
+    player.play('om.mp3');
   }
 }
