@@ -1,4 +1,4 @@
-import 'package:abhisargah_health_app/screens/external_links/redirect_tile.dart';
+import '/screens/external_links/redirect_tile.dart';
 import 'package:flutter/material.dart';
 import '../meditation/mediatation.dart';
 import 'chattile.dart';
@@ -25,10 +25,7 @@ class HomePage extends StatelessWidget {
             backgroundColor: greenColor,
             onPressed: () {
               //! Refdirect to Chat
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => Profile()),
-              );
+
             },
             child: const Icon(
               Icons.chat,

@@ -5,6 +5,7 @@ import 'package:rive/rive.dart';
 
 import '../../logic/quiz/quiz_brain.dart';
 import '../quiz/quiz_template.dart';
+import '../results/result_screen.dart';
 
 class LoadingQusScreen {
   late QuizBrain quizBrain = QuizBrain();
@@ -48,12 +49,12 @@ class LoadingQusScreen {
 
   Widget ButtonWork(BuildContext context) {
     if (index == 24) {
-      print(quizBrain.answers);
+
       //! integrate the last page here
-      return MyHomePage();
-      //   ResultScreen(
-      //   quizBrain: quizBrain,
-      // );
+
+       return  ResultScreen(
+        quizBrain: quizBrain,
+      );
     } else {
       String qus = quizBrain.qusList[index];
       String animationUrl = quizBrain.animationUrl[index];
