@@ -46,6 +46,7 @@ Test results of user to be accessible by their parents and children
 
 # Tech stacks used:
 Flutter <br />
+Tableau <br />
 A.I./M.L.<br />
 Cloud <br />
 A.R. <br />
