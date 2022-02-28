@@ -1,5 +1,9 @@
 # abhisargah_PS-5
+
+ ![Team abhisargah (1)](https://user-images.githubusercontent.com/16835617/155913588-491e5e8e-b914-4013-88b1-afe187d20fd9.png)
+
 this repo contains the solution created by team abhisargh made during the hackaton organized by codeutsava
+
 
 # Problem Statement:
 To create an informative AI-based tool that should be able to give alerts and identify cases of mental health issues in children and also track the improvement status in identified cases. It should be able to track mental health issues prevalent in children from birth to the ones which they acquired later in their life for remediation and counseling. The tool should support teacher’s.
@@ -95,7 +99,6 @@ directory then press
  
  
  
- ![Team abhisargah (1)](https://user-images.githubusercontent.com/16835617/155913588-491e5e8e-b914-4013-88b1-afe187d20fd9.png)
 
 
  
