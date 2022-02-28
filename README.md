@@ -85,20 +85,13 @@ directory then press
 
 
 
-
 # Team members
-Divy Arpit (3rd year, CSE, NIT Raipur)
-LinkedIn: https://www.linkedin.com/in/divy-arpit-40946b188 <br />
-Shikhar Mishra (3rd year, CSE, NIT Raipur)
-LinkedIn: https://www.linkedin.com/in/shikhar-mishra-23038b191 <br />
-Shruti Agrawal (3rd year, CSE, NIT Raipur)
-LinkedIn: https://www.linkedin.com/in/shruti-agrawal-247526190 <br />
-Vasu Soni (3rd year, CSE, NIT Raipur)
-LinkedIn: https://www.linkedin.com/in/iamvasusoni <br />
-Yash Bansal (3rd year, CSE, NIT Raipur)
-LinkedIn: https://www.linkedin.com/in/yash-bansal-90474a19b <br />
-Ayush Chouksey (3rd year, Mech, NIT Raipur)
-LinkedIn: https://www.linkedin.com/in/ayush-chouksey-476043190
+
+| Divy Arpit (3rd year, CSE, NIT Raipur)     | [LinkedIn](https://www.linkedin.com/in/divy-arpit-40946b188)     | Vasu Soni (3rd year, CSE, NIT Raipur)       | [LinkedIn](https://www.linkedin.com/in/iamvasusoni)              |   |
+|--------------------------------------------|------------------------------------------------------------------|---------------------------------------------|------------------------------------------------------------------|---|
+| Shikhar Mishra (3rd year, CSE, NIT Raipur) | [LinkedIn](https://www.linkedin.com/in/shikhar-mishra-23038b191) | Yash Bansal (3rd year, CSE, NIT Raipur)     | [LinkedIn](https://www.linkedin.com/in/yash-bansal-90474a19b)    |   |
+| Shruti Agrawal (3rd year, CSE, NIT Raipur) | [LinkedIn](https://www.linkedin.com/in/shruti-agrawal-247526190) | Ayush Chouksey (3rd year, Mech, NIT Raipur) | [LinkedIn](https://www.linkedin.com/in/ayush-chouksey-476043190) |   |
+|                                            |                                                                  |                                             |                                                                  |   |
  
  
  
