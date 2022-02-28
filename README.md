@@ -35,10 +35,14 @@ A.R. <br />
 
 
 ## How To Start :
-Place credentials.json at assets/chatbot/ directory 
-then press 
-    ```flutter run in terminal 
-
+Place credentials.json at 
+                        ```
+                        assets/chatbot/ 
+                        ```
+directory then press 
+                        $ ```
+                        flutter run in terminal 
+                        ```
 
 # Team members
 Divy Arpit (3rd year, CSE, NIT Raipur)
@@ -54,4 +58,3 @@ LinkedIn: https://www.linkedin.com/in/yash-bansal-90474a19b <br />
 Ayush Chouksey (3rd year, Mech, NIT Raipur)
 LinkedIn: https://www.linkedin.com/in/ayush-chouksey-476043190
  
->>>>>>> 1be993c94ce73e89f683a5ee695321b8ca018c8a
