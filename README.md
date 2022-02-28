@@ -80,12 +80,8 @@ LinkedIn: https://www.linkedin.com/in/ayush-chouksey-476043190
  
  
  
- 
- 
- 
- 
- 
- ![Team abhisargah](https://user-images.githubusercontent.com/16835617/155913429-10d4df12-7840-4d63-a619-5b76d22cfa1b.png)
+ ![Team abhisargah (1)](https://user-images.githubusercontent.com/16835617/155913588-491e5e8e-b914-4013-88b1-afe187d20fd9.png)
+
 
  
  
