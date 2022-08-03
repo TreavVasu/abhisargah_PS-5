@@ -91,7 +91,7 @@ directory then press
 
 # Team members
 
-| Divy Arpit (3rd year, CSE, NIT Raipur)     | [LinkedIn](https://www.linkedin.com/in/divy-arpit-40946b188)     | Vasu Soni (3rd year, CSE, NIT Raipur)       | [LinkedIn](https://www.linkedin.com/in/iamvasusoni)              |   |
+| Divy Arpit (3rd year, CSE, NIT Raipur)     | [LinkedIn](https://www.linkedin.com/in/divy-arpit-40946b188)     | Shubham Gupta (3rd year, CSE, NIT Raipur)       | [LinkedIn](https://www.linkedin.com/in/shubham-gupta-48204b131)              |   |
 |--------------------------------------------|------------------------------------------------------------------|---------------------------------------------|------------------------------------------------------------------|---|
 | Shikhar Mishra (3rd year, CSE, NIT Raipur) | [LinkedIn](https://www.linkedin.com/in/shikhar-mishra-23038b191) | Yash Bansal (3rd year, CSE, NIT Raipur)     | [LinkedIn](https://www.linkedin.com/in/yash-bansal-90474a19b)    |   |
 | Shruti Agrawal (3rd year, CSE, NIT Raipur) | [LinkedIn](https://www.linkedin.com/in/shruti-agrawal-247526190) | Ayush Chouksey (3rd year, Mech, NIT Raipur) | [LinkedIn](https://www.linkedin.com/in/ayush-chouksey-476043190) |   |
