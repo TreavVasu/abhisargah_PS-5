@@ -45,6 +45,8 @@ Divy Arpit (3rd year, CSE, NIT Raipur)
 LinkedIn: https://www.linkedin.com/in/divy-arpit-40946b188 <br />
 Shikhar Mishra (3rd year, CSE, NIT Raipur)
 LinkedIn: https://www.linkedin.com/in/shikhar-mishra-23038b191 <br />
+Shubham Gupta(3rd year, CSE, NIT Raipur)
+LinkedIn: https://www.linkedin.com/in/shubham-gupta-48204b131 <br />
 Shruti Agrawal (3rd year, CSE, NIT Raipur)
 LinkedIn: https://www.linkedin.com/in/shruti-agrawal-247526190 <br />
 Vasu Soni (3rd year, CSE, NIT Raipur)
